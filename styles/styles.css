@@ -17,6 +17,19 @@ body {
     font-weight: 700;
 }
 
+.footer {
+    width: 100%;
+    max-width: 1180px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+}
+
 .wrap {
     width: 100%;
     max-width: 1180px;
@@ -134,4 +147,31 @@ body {
 .services p {
     font-size: 14px;
     color: #B2B2B2;
+    line-height: 1.5;
+}
+
+.clients {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 25%) ; /*120 это ширина, 4 это колво колонок в ряду , 25 это соотношение размеров */
+    text-align: center;
+    grid-row-gap: 40px;
+}
+
+.team {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 33%); /* не совсем понял, как это работает */
+    grid-row-gap: 40px; /* делает расстояние между ячейками грида*/
+}
+
+.team-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.team-item img {
+    margin-right: 20px;
+}
+.team-item>div {      /* Разобраться*/ 
+    flex-basis: calc(100% - 100px);
 }
